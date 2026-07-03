@@ -102,8 +102,9 @@
         <h1>Find SaaS billing leakage from sanitized CSV exports.</h1>
         <p class="lead">RevLeak checks contracts, invoices, usage, credits, and amendments to produce an exception ledger for finance and RevOps operators. No production credentials. No payment-card data. No public source-code drop.</p>
         <div class="actions">
-          <a class="button" href="https://github.com/jagadish-645/revleak-audit/issues/new/choose">Request an audit</a>
+          <a class="button" href="https://github.com/jagadish-645/revleak-audit/issues/new?template=audit_request.yml">Request an audit</a>
           <a class="button secondary" href="sample-report.html">View sample report</a>
+          <a class="button secondary" href="sample-exceptions.csv">Download sample CSV</a>
         </div>
       </div>
       <aside class="preview" aria-label="Sample audit preview">
@@ -135,6 +136,15 @@
     </section>
 
     <section>
+      <h2>24-Hour Workflow</h2>
+      <div class="grid">
+        <div class="panel"><strong>1. Shape check</strong>Share only column headers or sanitized sample rows first. If the exports are not auditable, there is no paid run.</div>
+        <div class="panel"><strong>2. Fixed audit</strong>After scope is confirmed, send sanitized CSV exports through a private channel. The audit runs locally, without production credentials.</div>
+        <div class="panel"><strong>3. Operator packet</strong>Receive an executive report, exceptions CSV, input summary, and row-level evidence notes for finance or RevOps review.</div>
+      </div>
+    </section>
+
+    <section>
       <h2>First-Client Pricing</h2>
       <div class="grid">
         <div class="panel"><strong>Small sample</strong><div class="price">$49</div>One compact sanitized export set.</div>
@@ -153,7 +163,16 @@
       </ul>
       <p class="note">Sanitized customer IDs are enough. Do not upload private exports publicly.</p>
     </section>
+
+    <section>
+      <h2>Best Fit</h2>
+      <ul>
+        <li>SaaS teams moving between Stripe Billing, Chargebee, Maxio, NetSuite, QuickBooks, Salesforce, or HubSpot.</li>
+        <li>Usage-based or hybrid billing where metering, discounts, credits, or amendments can drift from invoices.</li>
+        <li>RevOps, finance, or implementation partners who need a fast exception ledger before a larger cleanup.</li>
+      </ul>
+      <p class="note">The output is an exception audit for operator review, not accounting advice or revenue-recognition advice.</p>
+    </section>
   </main>
 </body>
 </html>
-

@@ -33,6 +33,7 @@ Messy client-export sample:
 - 9 exceptions found.
 - 4 high severity.
 - $2,728 high/medium amount to inspect.
+- Buyer-safe sample exceptions CSV: https://jagadish-645.github.io/revleak-audit/sample-exceptions.csv
 
 ## First-Client Pricing
 
@@ -46,10 +47,11 @@ No production credentials are required. Sanitized customer IDs are enough.
 
 Open the `RevLeak audit request` issue form with only non-sensitive context:
 
+https://github.com/jagadish-645/revleak-audit/issues/new?template=audit_request.yml
+
 - company type,
 - billing system,
 - whether you have contracts/order forms, invoices, usage, credits, and amendments as CSV,
 - preferred contact method.
 
 Do not upload private exports publicly. Review the HTML sample report at https://jagadish-645.github.io/revleak-audit/sample-report.html
-
