@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RevLeak Billing Audit</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6675;
+      --line: #d8dee8;
+      --wash: #f5f7fa;
+      --green: #0f766e;
+      --blue: #1f5fbf;
+      --red: #b42318;
+      --amber: #a15c07;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.5;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 34px 20px 52px; }
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 0.95fr);
+      gap: 28px;
+      align-items: start;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow { color: var(--green); font-weight: 800; text-transform: uppercase; font-size: 0.84rem; }
+    h1 { font-size: clamp(2.1rem, 5vw, 4.5rem); line-height: 1.02; margin: 8px 0 14px; letter-spacing: 0; }
+    .lead { color: var(--muted); font-size: 1.12rem; max-width: 690px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 6px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .button.secondary { background: #fff; color: var(--green); }
+    .preview {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 18px 40px rgba(23, 32, 51, 0.08);
+    }
+    .preview-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--wash);
+      border-bottom: 1px solid var(--line);
+      font-weight: 800;
+    }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+    .metric { padding: 14px 16px; border-right: 1px solid var(--line); }
+    .metric:last-child { border-right: 0; }
+    .metric span { display: block; color: var(--muted); font-size: 0.8rem; }
+    .metric strong { display: block; margin-top: 3px; font-size: 1.35rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); background: #fbfcfe; font-size: 0.76rem; text-transform: uppercase; }
+    .high { color: var(--red); font-weight: 800; }
+    .medium { color: var(--amber); font-weight: 800; }
+    section { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0 0 12px; font-size: 1.32rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .panel { border: 1px solid var(--line); border-radius: 8px; padding: 16px; background: var(--wash); }
+    .panel strong { display: block; margin-bottom: 6px; }
+    .price { font-size: 1.9rem; font-weight: 900; color: var(--blue); }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 7px; }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    @media (max-width: 860px) {
+      header { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr; }
+      .metric { border-right: 0; border-bottom: 1px solid var(--line); }
+      .metric:last-child { border-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="eyebrow">24-hour forensic billing audit</div>
+        <h1>Find SaaS billing leakage from sanitized CSV exports.</h1>
+        <p class="lead">RevLeak checks contracts, invoices, usage, credits, and amendments to produce an exception ledger for finance and RevOps operators. No production credentials. No payment-card data. No public source-code drop.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/jagadish-645/revleak-audit/issues/new">Request an audit</a>
+          <a class="button secondary" href="sample-report.md">View sample report</a>
+        </div>
+      </div>
+      <aside class="preview" aria-label="Sample audit preview">
+        <div class="preview-top"><span>Sample Audit</span><span>Billing period 2026-06</span></div>
+        <div class="metrics">
+          <div class="metric"><span>Exceptions</span><strong>9</strong></div>
+          <div class="metric"><span>High severity</span><strong>4</strong></div>
+          <div class="metric"><span>Inspect value</span><strong>$2,728</strong></div>
+        </div>
+        <table>
+          <thead><tr><th>Rule</th><th>Customer</th><th>Issue</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr><td class="high">RLK-002</td><td>Corelytics</td><td>Invoice below expected billing</td><td>$340</td></tr>
+            <tr><td class="high">RLK-001</td><td>DeltaDesk</td><td>Usage or contracted revenue but no invoice</td><td>$120</td></tr>
+            <tr><td class="medium">RLK-004</td><td>Corelytics</td><td>Invoice is not marked paid</td><td>$1,700</td></tr>
+            <tr><td class="medium">RLK-007</td><td>C199</td><td>Usage exists without active contract</td><td>$0</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </header>
+
+    <section>
+      <h2>What The Audit Checks</h2>
+      <div class="grid">
+        <div class="panel"><strong>Contract vs invoice</strong>Flags invoices below contract-derived fee, usage, credit, discount, and amendment expectations.</div>
+        <div class="panel"><strong>Usage overages</strong>Finds accounts exceeding allowance where overages may be missing or undercharged.</div>
+        <div class="panel"><strong>Operator evidence</strong>Delivers a report, exceptions CSV, normalized inputs, and evidence ledger for internal review.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>First-Client Pricing</h2>
+      <div class="grid">
+        <div class="panel"><strong>Small sample</strong><div class="price">$49</div>One compact sanitized export set.</div>
+        <div class="panel"><strong>Standard</strong><div class="price">$99</div>24-hour audit report plus exceptions CSV.</div>
+        <div class="panel"><strong>Expanded</strong><div class="price">$199</div>Multiple exports plus operator recommendations.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Safe Inputs</h2>
+      <ul>
+        <li>Contracts or order forms export.</li>
+        <li>Invoices export.</li>
+        <li>Usage export for one billing period.</li>
+        <li>Optional credits, amendments, discounts, and CRM deal exports.</li>
+      </ul>
+      <p class="note">Sanitized customer IDs are enough. Do not upload private exports publicly.</p>
+    </section>
+  </main>
+</body>
+</html>
+
