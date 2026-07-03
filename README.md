@@ -1,4 +1,4 @@
-# RevLeak Billing Audit
+﻿# RevLeak Billing Audit
 
 RevLeak is a fixed-scope forensic billing exception audit for SaaS and subscription businesses.
 
@@ -44,12 +44,12 @@ No production credentials are required. Sanitized customer IDs are enough.
 
 ## Request An Audit
 
-Open a GitHub issue titled `RevLeak audit request` with only non-sensitive context:
+Open the `RevLeak audit request` issue form with only non-sensitive context:
 
 - company type,
 - billing system,
 - whether you have contracts/order forms, invoices, usage, credits, and amendments as CSV,
 - preferred contact method.
 
-Do not upload private exports publicly.
+Do not upload private exports publicly. Review the HTML sample report at https://jagadish-645.github.io/revleak-audit/sample-report.html
 

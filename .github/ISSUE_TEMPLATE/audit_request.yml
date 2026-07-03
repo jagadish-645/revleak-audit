@@ -1,0 +1,78 @@
+name: RevLeak audit request
+description: Request a fixed-scope billing exception audit. Do not upload private exports here.
+title: "RevLeak audit request: "
+labels: ["audit-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in RevLeak.
+
+        Do not upload private exports, customer data, payment data, or credentials in this public issue. Sanitized CSVs can be shared later through a private channel after scope is confirmed.
+  - type: input
+    id: company_type
+    attributes:
+      label: Company type
+      description: Example: B2B SaaS, usage-based API, subscription agency client, marketplace subscription.
+      placeholder: B2B SaaS with usage-based billing
+    validations:
+      required: true
+  - type: dropdown
+    id: billing_complexity
+    attributes:
+      label: Billing complexity
+      options:
+        - Usage-based or metered billing
+        - Seat-based subscription billing
+        - Mixed subscription + usage billing
+        - Manual order forms/contracts
+        - Not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: exports_available
+    attributes:
+      label: Exports available
+      description: Check what you can export as CSV.
+      options:
+        - label: Contracts or order forms
+        - label: Invoices
+        - label: Usage
+        - label: Credits or credit memos
+        - label: Amendments or subscription changes
+        - label: Discounts
+        - label: CRM deals or opportunities
+  - type: input
+    id: billing_systems
+    attributes:
+      label: Billing/finance systems
+      description: Examples: Stripe Billing, Chargebee, Recurly, Maxio, QuickBooks, NetSuite, HubSpot, Salesforce.
+      placeholder: Stripe Billing + HubSpot + QuickBooks
+  - type: dropdown
+    id: target_scope
+    attributes:
+      label: Desired scope
+      options:
+        - $49 small sample audit
+        - $99 standard 24-hour audit
+        - $199 expanded audit with recommendations
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What billing problem are you trying to catch?
+      description: Keep this non-sensitive. Do not paste customer data.
+      placeholder: We suspect usage overages and contract amendments are not always reflected in invoices.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact
+      description: Email, LinkedIn, website contact page, or "reply here". Do not include sensitive information.
+      placeholder: reply here
+    validations:
+      required: true
+

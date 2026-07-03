@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: View sample report
+    url: https://jagadish-645.github.io/revleak-audit/sample-report.html
+    about: Inspect the buyer-safe sample output before requesting an audit.
+
