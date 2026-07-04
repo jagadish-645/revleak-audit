@@ -43,6 +43,20 @@ Messy client-export sample:
 
 No production credentials are required. Sanitized customer IDs are enough.
 
+## Fast Approval Path
+
+For the shortest path, email `jagadish.goudaa@gmail.com` with:
+
+```text
+I approve a $49 first-client RevLeak audit if my sanitized export shape is auditable.
+
+Billing system:
+Exports available:
+Turnaround: 24 hours after sanitized exports are received
+```
+
+Do not attach raw exports, credentials, payment-card data, or private customer data in public channels. Send sanitized headers or fake/anonymized sample rows first.
+
 ## Request An Audit
 
 Open the `RevLeak audit request` issue form with only non-sensitive context:
