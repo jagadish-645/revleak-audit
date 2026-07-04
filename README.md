@@ -40,6 +40,7 @@ Messy client-export sample:
 - $49 small export-set audit.
 - $99 standard 24-hour audit.
 - $199 expanded audit with operator recommendations.
+- INR 999 India emergency cleanup for one CSV/XLSX file or exception check, UPI-friendly after sanitized shape check.
 
 No production credentials are required. Sanitized customer IDs are enough.
 
@@ -56,6 +57,20 @@ Turnaround: 24 hours after sanitized exports are received
 ```
 
 Do not attach raw exports, credentials, payment-card data, or private customer data in public channels. Send sanitized headers or fake/anonymized sample rows first.
+
+## India Emergency Cleanup
+
+For India-based founders, finance teams, CAs, and operators:
+
+```text
+I approve an INR 999 emergency CSV/XLSX cleanup or exception check if my sanitized file shape is doable.
+
+File type:
+Problem:
+Turnaround: 24 hours after sanitized file is received
+```
+
+Payment details are handled only after the free shape check confirms the task is doable. Do not send PAN, Aadhaar, bank statements, credentials, payroll PII, or private customer data in the first message.
 
 ## Request An Audit
 
