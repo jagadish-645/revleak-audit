@@ -35,42 +35,22 @@ Messy client-export sample:
 - $2,728 high/medium amount to inspect.
 - Buyer-safe sample exceptions CSV: https://jagadish-645.github.io/revleak-audit/sample-exceptions.csv
 
-## First-Client Pricing
+## Scoped Diagnostic Request
 
-- $49 small export-set audit.
-- $99 standard 24-hour audit.
-- $199 expanded audit with operator recommendations.
-- INR 999 India emergency cleanup for one CSV/XLSX file or exception check, UPI-friendly after sanitized shape check.
+Use this page as a proof sample, not as a place to send private data.
 
-No production credentials are required. Sanitized customer IDs are enough.
-
-## Fast Approval Path
-
-For the shortest path, email `jagadish.goudaa@gmail.com` with:
+If the sample matches a real billing, export, or exception-ledger problem, email `jagadish.goudaa@gmail.com` with:
 
 ```text
-I approve a $49 first-client RevLeak audit if my sanitized export shape is auditable.
+I have a billing/export exception problem that may fit RevLeak.
 
 Billing system:
-Exports available:
-Turnaround: 24 hours after sanitized exports are received
+Exports available as CSV:
+What looks wrong:
+Decision deadline:
 ```
 
-Do not attach raw exports, credentials, payment-card data, or private customer data in public channels. Send sanitized headers or fake/anonymized sample rows first.
-
-## India Emergency Cleanup
-
-For India-based founders, finance teams, CAs, and operators:
-
-```text
-I approve an INR 999 emergency CSV/XLSX cleanup or exception check if my sanitized file shape is doable.
-
-File type:
-Problem:
-Turnaround: 24 hours after sanitized file is received
-```
-
-Payment details are handled only after the free shape check confirms the task is doable. Do not send PAN, Aadhaar, bank statements, credentials, payroll PII, or private customer data in the first message.
+No production credentials are required. Do not attach raw exports, credentials, payment-card data, bank data, payroll PII, or private customer data in public channels. Send sanitized headers or fake/anonymized sample rows first. A paid scope is quoted only after the export shape is confirmed auditable.
 
 ## Request An Audit
 
